@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font: 13px sans-serif; width: 280px; margin: 12px; }
+      h1 { font-size: 15px; margin: 0 0 10px; }
+      label { display: block; margin-bottom: 8px; }
+      label span { display: block; color: #555; margin-bottom: 2px; }
+      input[type="text"] { width: 100%; box-sizing: border-box; padding: 5px; }
+      .row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+      button { padding: 6px 10px; cursor: pointer; }
+      #status { color: #2e7d32; margin-left: 8px; }
+      a { color: #1565c0; }
+    </style>
+  </head>
+  <body>
+    <h1>Cita Previa Autofill</h1>
+    <label class="row"><input type="checkbox" id="enabled" /> Enabled</label>
+    <label><span>Provincia</span><input type="text" id="provincia" /></label>
+    <label><span>Oficina (words to match)</span><input type="text" id="oficina" /></label>
+    <label><span>Trámite (words to match)</span><input type="text" id="tramite" /></label>
+    <label><span>NIE</span><input type="text" id="nie" /></label>
+    <label><span>Nombre y apellidos</span><input type="text" id="nombre" /></label>
+    <div class="row">
+      <button id="save">Save</button>
+      <button id="open">Open page</button>
+      <span id="status"></span>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
