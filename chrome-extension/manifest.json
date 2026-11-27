@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Cita Previa Autofill (Barcelona TIE)",
+  "version": "1.0.0",
+  "description": "Autofills the ICP cita previa flow: Barcelona, Rambla Guipuscoa, Recogida de TIE, NIE and name.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cita Previa Autofill"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://icp.administracionelectronica.gob.es/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
